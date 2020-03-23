@@ -11,12 +11,14 @@
         "Electron",
         "social-distancing"
     ],
-    "author": "GitHub",
+    "author": "LearningMonkey61",
     "license": "",
     "devDependencies": {
-        "electron": "^8.0.3"
+        "electron": "^8.0.3",
+        "minimist": ">=1.2.2"
     },
     "dependencies": {
-        "nodemon": "^2.0.2"
+        "nodemon": "^2.0.2",
+        "minimist": ">=1.2.2"
     }
 }
