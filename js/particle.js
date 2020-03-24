@@ -4,6 +4,7 @@ class Particle {
         this.infected = inf;
         this.x = xpos;
         this.y = ypos;
+        this.cured = false;
         if (movfactor == 0) {
             this.xvel = 0;
             this.yvel = 0;
@@ -38,6 +39,7 @@ class Particle {
             g = 255;
             b = 0;
             this.infected = false;
+            this.cured = true;
         }
         fill(r, g, b);
         ellipse(this.x, this.y, this.d, this.d);

@@ -8,6 +8,7 @@ let infected = 0.01;
 
 let numInfec = 0;
 let numHealt = 0;
+// let numCured = 0;
 
 let frameCount;
 let cureday = 10 * 150;
@@ -55,9 +56,12 @@ function draw() {
 
         if (p.infected == true) {
             numInfec++;
-        } else if (p.infected == false) {
+        } else if (p.infected == false && p.vaccinetime > 0) {
             numHealt++;
+        } else {
+            numCured++;
         }
+
 
         if (frameCount >= cureday) {
             if (p.infected) {
@@ -68,7 +72,6 @@ function draw() {
     });
 
     frameCount++;
-    console.log(numInfec)
 
 }
 
