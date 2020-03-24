@@ -1,8 +1,5 @@
 let button;
 
-let cureTime = 250;
-let cure = false;
-
 let particles = [];
 let slider;
 let numP = 200;
@@ -11,8 +8,9 @@ let infected = 0.01;
 
 let numInfec = 0;
 let numHealt = 0;
-let frameCount;
 
+let frameCount;
+let cureday = 10 * 150;
 
 
 function setup() {
@@ -34,16 +32,11 @@ function setup() {
     );
     bgcanvas.parent('sketch-holder');
 
-
     reload();
 
 }
 
 function draw() {
-
-    if (frameCount == cureTime) {
-        cure = true;
-    }
     numInfec = 0;
     numHealt = 0;
     background(0);
@@ -51,29 +44,31 @@ function draw() {
     fill(0, 102, 153);
     text(sdfactor, 10, 60);
 
-    // document.getElementById("sdfactor").innerHTML = slider.value();
 
+    // document.getElementById("sdfactor").innerHTML = slider.value();
+    document.getElementById("time passed").innerHTML = int(frameCount / 10) + ' Days';
 
     particles.forEach(p => {
         p.collide();
         p.move();
         p.show();
+
         if (p.infected == true) {
             numInfec++;
         } else if (p.infected == false) {
             numHealt++;
         }
 
-        if (cure == true || p.infected == true) {
-            p.curet--;
-            if (p.curet == 0) {
-                p.infected = false
+        if (frameCount >= cureday) {
+            if (p.infected) {
+                p.vaccinetime--;
             }
         }
 
     });
 
     frameCount++;
+    console.log(numInfec)
 
 }
 
@@ -86,7 +81,8 @@ function reload() {
             i,
             particles,
             Math.random() < sdfactor ? 0 : 1,
-            Math.random() < infected ? true : false
+            Math.random() < infected ? true : false,
+            random(0, 5000)
 
         );
     }
