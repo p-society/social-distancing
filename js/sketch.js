@@ -58,8 +58,6 @@ function draw() {
             numInfec++;
         } else if (p.infected == false && p.vaccinetime > 0) {
             numHealt++;
-        } else {
-            numCured++;
         }
 
 

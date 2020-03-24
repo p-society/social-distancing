@@ -4,6 +4,7 @@ window.onload = function() {
     var hdps = [];
     // var cdps = [];
     var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light2",
         animationEnabled: true,
         axisX: {
             title: "No. of Days ",
