@@ -1,3 +1,6 @@
+var idps = []; // dataPoints
+var hdps = [];
+
 window.onload = function() {
 
     var idps = []; // dataPoints

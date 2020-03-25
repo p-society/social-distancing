@@ -26,13 +26,14 @@ class Particle {
         let g = 0;
         let b = 0;
         if (this.infected) {
-            r = 255;
-            g = 0;
-            b = 0;
+
+            r = 248;
+            g = 78;
+            b = 22;
         } else {
-            r = 0;
-            g = 255;
-            b = 0;
+            r = 52;
+            g = 130;
+            b = 75;
         }
         if (this.vaccinetime < 0) {
             r = 255;

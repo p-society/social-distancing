@@ -2,7 +2,7 @@ let button;
 
 let particles = [];
 let slider;
-let numP = 200;
+let numP = 199;
 let sdfactor;
 let infected = 0.01;
 
@@ -29,7 +29,7 @@ function setup() {
 
     bgcanvas = createCanvas(canvasDiv.offsetWidth, canvasDiv.offsetHeight);
     bgcanvas.style(
-        "cursor: none; z-index:-1000 ; "
+        "cursor: none; z-index:-1000 ; border:1px; border-style: groove; "
     );
     bgcanvas.parent('sketch-holder');
 
@@ -40,7 +40,7 @@ function setup() {
 function draw() {
     numInfec = 0;
     numHealt = 0;
-    background(0);
+    background(255);
     textSize(50);
     fill(0, 102, 153);
     text(sdfactor, 10, 60);
@@ -88,4 +88,7 @@ function reload() {
         );
     }
     sdfactor = slider.value();
+
+    hdps = [];
+    idps = [];
 }
