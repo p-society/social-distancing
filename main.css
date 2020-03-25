@@ -3,8 +3,17 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    background: red;
+    animation: mymove 5s infinite;
+    
 }
+@keyframes mymove {
+    from {background-color: rgb(221, 240, 243);}
+    to {background-color: rgb(227, 248, 187);}
+    
 
+  }
+  
 h1 {
     font-size: 8vh;
 }
@@ -13,6 +22,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     height: 100%;
     border: 1px;
     border-color: red;
@@ -22,9 +32,9 @@ h1 {
 
 #head {
     flex: 2;
-    border: 10px;
-    border-color: red;
-    border-width: 10px;
+
+    
+    
     border-style: solid;
     text-align: center;
 }
@@ -33,9 +43,9 @@ h1 {
     display: flex;
     flex: 6;
     justify-content: space-evenly;
-    border: 10px;
-    border-color: blue;
-    border-width: 10px;
+    border: 5px;
+    border-color: rgb(172, 228, 230);
+    border-width: 5px;
     border-style: solid;
 }
 
@@ -44,16 +54,15 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 10px;
-    border-color: green;
-    border-width: 10px;
+    
+    
     border-style: solid;
 }
 
 #slider {
     flex: 1;
-    border: 10px;
-    border-color: yellow;
+    border: 5px;
+    border-color: rgba(250, 219, 119, 0.705);
     border-width: 10px;
     border-style: solid;
 }
@@ -61,7 +70,7 @@ h1 {
 #graph {
     flex: 5;
     border: 10px;
-    border-color: darkmagenta;
+    border-color: rgba(224, 119, 172, 0.87);
     border-width: 10px;
     border-style: solid;
 }
@@ -81,3 +90,34 @@ h1 {
     border-width: 10px;
     border-style: solid;
 }
+
+
+
+
+/*.container p {
+    color: black;
+    font-family: monospace;
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+ /* @keyframes typing {
+    from { width: 0 }
+    to { width: 100%}
+  }
+  
+  /* The typewriter cursor effect */
+  /*@keyframes blink-caret {
+    from, to { border-color: transparent }
+    5%{ border-color: orange }
+  }
+*/
+
+/*body {
+    
+    background: red;
+    animation: mymove 5s infinite;
+  }*/
