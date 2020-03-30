@@ -9,6 +9,8 @@ window.onload = function() {
     var chart = new CanvasJS.Chart("chartContainer", {
         theme: "light2",
         animationEnabled: true,
+        backgroundColor:"#000000",
+
         axisX: {
             title: "No. of Days ",
         },
