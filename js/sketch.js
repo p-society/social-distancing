@@ -24,7 +24,7 @@ function setup() {
 
     button = createButton('Reload')
     button.mousePressed(reload);
-    button.parent('reload');
+    button.parent('slider');
 
 
     bgcanvas = createCanvas(canvasDiv.offsetWidth, canvasDiv.offsetHeight);
