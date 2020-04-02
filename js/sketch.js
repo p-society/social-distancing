@@ -17,7 +17,7 @@ let cureday = 10 * 150;
 function setup() {
 
     var canvasDiv = document.getElementById('sketch-holder');
-
+    var rel=document.createClass
 
     slider = createSlider(0, 1, 0.5, 0.05);
     slider.parent('slider');
@@ -40,10 +40,11 @@ function setup() {
 function draw() {
     numInfec = 0;
     numHealt = 0;
-    background(255);
+    background(0);
     textSize(50);
+
     fill(0, 102, 153);
-    text(sdfactor, 10, 60);
+    text(sdfactor, 20, 120);
 
 
     // document.getElementById("sdfactor").innerHTML = slider.value();

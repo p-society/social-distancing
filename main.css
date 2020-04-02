@@ -5,10 +5,12 @@
         height: 100%;
         margin: 0px;
         padding: 0px;
+        background: url(folk-pattern-black/folk-pattern-black.png) repeat 0 0;
     }
     
     h1 {
-        font-size: 8vh;
+        font-size: 55px;
+        font-family: 'Nobile', Helvetica, Arial, sans-serif;
     }
     
     #container {
@@ -20,15 +22,18 @@
     
     #head {
         flex: 2;
-        background-color: rgba(255, 255, 255, 0.603);
+        color: #aaccff;
         border: 10px;
         text-align: center;
+        padding: 10px;
     }
     
     #content {
         display: flex;
         flex: 6;
         justify-content: space-evenly;
+        color: #aaccff;
+        padding: 10px; 
     }
     
     #control {
@@ -45,7 +50,12 @@
         justify-content: start;
         border: 10px;
     }
+    #slider{
+         padding: 0px 10px; 
+    }
     
+
+    }
     input {
         -webkit-appearance: none;
         width: 200px;
